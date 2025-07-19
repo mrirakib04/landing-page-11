@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { PiListBold } from "react-icons/pi";
+import bg from "./../assets/images/1.png";
+import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
@@ -19,7 +21,7 @@ const Header = () => {
             <PiListBold></PiListBold>
           </button>
           {showNav && (
-            <ul className="md:hidden flex-col p-5 border-2 rounded-2xl bg-gray-100 items-start gap-3 text-lg font-medium flex absolute top-16 right-3">
+            <ul className="md:hidden flex-col p-5 border-2 rounded-2xl bg-gray-100 items-start gap-3 text-lg font-medium flex absolute top-16 left-3">
               <li>
                 <a
                   className="text-gray-700 hover:text-red-500 duration-300"
@@ -123,6 +125,44 @@ const Header = () => {
           </button>
         </div>
       </nav>
+      <div
+        className="w-full rounded-xl pb-5 px-5 lg:pt-80 md:pt-60 sm:pt-40 pt-28"
+        style={{
+          background: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundPositionX: "center",
+          backgroundPositionY: "center",
+        }}
+      >
+        <div className="flex items-end sm:justify-between justify-center">
+          <div className="flex items-center gap-5">
+            <button className="p-3 rounded-full bg-black text-white text-xl hover:bg-white hover:text-black">
+              <IoArrowBack></IoArrowBack>
+            </button>
+            <button className="p-3 rounded-full bg-black text-white text-xl hover:bg-white hover:text-black">
+              <IoArrowForward></IoArrowForward>
+            </button>
+          </div>
+          <div className="p-3 rounded-xl bg-black text-white md:max-w-md sm:max-w-sm sm:block hidden">
+            <h3 className="text-xl font-medium">
+              Meet all the heroes from the field
+            </h3>
+            <p className="text-gray-300 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              in rem consequatur ex animi officia quo sunt voluptatem eius est.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="p-3 rounded-xl mt-5 bg-black text-white sm:hidden block">
+        <h3 className="sm:text-xl text-base font-medium">
+          Meet all the heroes from the field
+        </h3>
+        <p className="sm:text-base text-sm text-gray-300 mt-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum in
+          rem consequatur ex animi officia quo sunt voluptatem eius est.
+        </p>
+      </div>
     </div>
   );
 };
