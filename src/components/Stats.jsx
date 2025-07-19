@@ -1,3 +1,4 @@
+import Stat from "../subComponents/Stat";
 import Title from "../subComponents/Title";
 
 const Stats = () => {
