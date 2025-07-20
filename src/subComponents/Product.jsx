@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FaEye, FaHeart, FaStar } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 
@@ -12,9 +13,9 @@ const Product = ({
   deliveryFee,
 }) => {
   return (
-    <div className="w-full flex items-center gap-2 p-3 rounded-lg border">
+    <div className="w-full h-auto flex sm:flex-nowrap flex-wrap items-center gap-2 p-3 rounded-lg border">
       <img
-        className="h-full"
+        className="sm:h-full h-40"
         src={productImage}
         alt={`image- ${productName}`}
       />
@@ -35,7 +36,7 @@ const Product = ({
         </div>
         <h3 className="text-lg font-semibold">{productName}</h3>
         <p className="text-sm font-medium">{productBio}</p>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 flex-wrap">
           <p className="font-medium text-red-500">Price - ${price}</p>
           <p className="text-gray-600 flex items-center gap-1">
             <FaCartShopping className="text-lg"></FaCartShopping> Delivery Fee -
@@ -45,6 +46,17 @@ const Product = ({
       </div>
     </div>
   );
+};
+
+Product.propTypes = {
+  productImage: PropTypes.any.isRequired,
+  ratings: PropTypes.number,
+  views: PropTypes.number,
+  loves: PropTypes.number,
+  productName: PropTypes.string,
+  productBio: PropTypes.string,
+  price: PropTypes.number,
+  deliveryFee: PropTypes.number,
 };
 
 export default Product;
