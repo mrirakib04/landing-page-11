@@ -1,5 +1,5 @@
-import Stat from "../subComponents/Stat";
 import Title from "../subComponents/Title";
+import Stat from "../subComponents/Stat";
 import statImg1 from "./../assets/images/GroupA.png";
 import statImg2 from "./../assets/images/GroupB.png";
 import statImg3 from "./../assets/images/GroupC.png";

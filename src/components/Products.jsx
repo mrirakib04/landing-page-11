@@ -1,5 +1,5 @@
-import Product from "../subComponents/Product";
 import Title from "../subComponents/Title";
+import Product from "../subComponents/Product";
 import productImg1 from "./../assets/images/5.png";
 import productImg2 from "./../assets/images/6.png";
 import productImg3 from "./../assets/images/7.png";
